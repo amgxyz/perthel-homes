@@ -1,0 +1,1269 @@
+/*
+Theme Name: Perthel Homes
+Theme URI: http://underscores.me/
+Author: Orion Group
+Author URI: http://orionweb.net
+Description: A custom starter theme based on _s
+Version: 1.1.2
+License: GNU General Public License
+License URI: license.txt
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+/* =Global
+----------------------------------------------- */
+body {
+	color: #fff5f2;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight:300;
+	background:#50555b url(images/content-bk.jpg) 0 0 repeat;
+}
+p {
+	font-weight:300;
+}
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+/* Labels */
+label {
+	color:#fff5f2;
+}
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+	color:#fff5f2;
+	font-family: 'Open Sans', sans-serif;
+}
+*[class*=-title],
+*[class*=-title] a {
+	color:#fff5f2;
+	font-weight:500;
+}
+.widget-title {
+	text-align:center;
+}
+.single-current-homes h1,
+.single-current-home h1 {
+	font-size:28px;
+}
+.single-current-homes h2,
+.single-current-home h2 {
+	font-size:24px;
+}
+.single-current-homes h3,
+.single-current-home h3 {
+	font-size:22px;
+}
+.single-current-homes h4,
+.single-current-home h4 {
+	font-size:20px;
+}
+.single-current-homes h5,
+.single-current-home h5 {
+	font-size:18px;
+}
+.single-current-homes h6,
+.single-current-home h6 {
+	font-size:16px;
+}
+.page-title {
+	color:#ffe9e1;
+	font-size:30px;
+	font-style:italic;
+}
+.page-title span {
+	color:#fff5f2;
+	font-style:normal;
+	font-size:2.75rem;
+}
+.page-title span small {
+	color:#FFF !important;
+	font-style:italic;
+	font-size:16px;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+	cursor:text;
+}
+ul, ol {
+	margin: 0 0 1.5em 1.5em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+	color:#fddccf;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border-style: solid;
+	border-width: 0px;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	line-height: normal;
+	margin: 0 0 1.25rem;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	display: inline-block;
+	padding-top: 1rem;
+	padding-right: 2rem;
+	padding-bottom: 1.0625rem;
+	padding-left: 2rem;
+	font-size: 1rem;
+	background-color: #990600;
+	border-color: #681a18;
+	color: #fff5f2;
+	transition: background-color 300ms ease-out;
+	border-radius:4px;
+	text-shadow:0 1px 1px rgba(0,0,0,.8);
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background-color: #8e0601
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	background-color: #8e0601
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type=text],
+input[type=email],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type=text],
+input[type=email] {
+	padding: 3px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a {
+	color: #ffe9e1;
+	transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3 ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+}
+a:visited {
+	color: none;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #fddccf;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* =Menu
+----------------------------------------------- */
+/*.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	display:inline-block;
+	position: relative;
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+.main-navigation ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	display:inline-block;
+	position: absolute;
+		top: 1.5em;
+		left: 0;
+	z-index: 99999;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+}
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+}*/
+
+/* Small menu */
+/*.menu-toggle {
+	cursor: pointer;
+	display: none;
+}*/
+
+/**
+ * Foundation: Small.
+ * Max-width 640px, mobile-only styles, use when QAing mobile issues
+ */
+/*@media screen and (max-width: 40em) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}*/
+
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.entry-meta {
+	clear: both;
+}
+.byline {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+.comment-content img[height],
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+img.size-full {
+    width: auto;
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+    max-width: 100%;
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-content .gallery dd {
+	margin: 0;
+}
+.site-content .gallery-columns-4 .gallery-item {
+}
+.site-content .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-content .site-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+.site-content .nav-previous {
+	float: left;
+	width: 50%;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+.bypostauthor {
+}
+
+/* =Widgets
+----------------------------------------------- */
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+#searchsubmit {
+	display: none;
+}
+
+/* ==========================================================================
+   Custom CSS.
+   Add any base custom CSS here.  Add Media Queries below.
+   ========================================================================== */
+.byline .vcard{
+	border:none;
+	margin: 0;
+	padding: 0;
+}
+.site-header {
+	position:fixed;
+	left:0;
+	top:0;
+	height:auto;
+	width:100%;
+	margin:0;
+	padding:0 0 50px 0;
+	background:url(images/header-bk.png) center bottom repeat-x;
+	z-index:2;
+}
+.logged-in .site-header {
+	top:32px;
+}
+.site-header-coverings {
+	float:left;
+	position:relative;
+	height:0;
+	width:100%;
+	margin:0;
+	padding:0;
+	z-index:2;
+}
+.site-header-inner {
+	float:left;
+	height:auto;
+	width:100%;
+	margin:0;
+	padding:20px 0 0 0;
+	background:url(images/header-bk-rep.png) center top repeat;
+}
+.header-right {
+	padding-top:18px;
+}
+
+/* Slider CSS */
+.slider-wrapper {
+	float:left;
+	position:relative;
+	height:auto;
+	width:100%;
+	margin:-50px 0 0 0;
+	padding:0;
+	z-index:0;
+}
+.slider-wrapper .soliloquy-container {
+	margin-bottom:0 !important;
+}
+.slider-wrapper .soliloquy-container .soliloquy-caption {
+	bottom: auto !important;
+	top:40px !important;
+	display:block !important;
+}
+.slider-wrapper .soliloquy-container .soliloquy-caption-inside {
+	background: rgba(255,255,255,.4) !important;
+	font-size: 33px !important;
+	line-height: 36px !important;
+	color: #010000 !important;
+	text-shadow: 0 1px 1px rgba(0,0,0,.5) !important;
+	text-align: right !important;
+	padding: 10px 2% !important;
+}
+.slider-wrapper .banner {
+	float:left;
+	height:auto;
+	width:100%;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.slider-wrapper .banner img {
+	width:100%;
+	height:auto;
+}
+.slider-bottom-bar {
+	float:left;
+	position:relative;
+	z-index:1;
+	width:100%;
+	height:70px;
+	margin:-32px 0 0 0;
+	padding:0;
+	background:url(images/content-top-bk.png) center top repeat-x;
+}
+/* Content CSS */
+.site {
+	float:left;
+	height:auto;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+#secondary {
+	background:url(images/secondary-bk.png) 0 0 no-repeat;
+	background-size:100% 350px;
+	padding-top:350px;
+}
+#secondary-inenr {
+	background:url(images/secondary-bk-rep.png) 0 0 repeat;
+	position:relative;
+	height:100%;
+}
+#secondary-inenr-1 {
+	position:relative;
+	margin-top:-280px;
+	height:100%;
+}
+/* Social Media Widget CSS */
+#secondary .social-media-widget {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+}
+ul.social-media {
+	float:left;
+	height:auto;
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+ul.social-media li {
+	display:inline-block;
+	*display:inline;
+	margin-left:15px;
+}
+ul.social-media li:first-child {
+	margin-left:0;
+}
+ul.social-media li a:hover {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+}
+/* Scroll Top */
+.scroll-top {
+	position:fixed;
+	right:10px;
+	bottom:30px;
+	opacity: 0.9;
+	padding:10px;
+	background-color: #990600;
+	border: #ffffff;
+	visibility:hidden;
+	color: #eeeeee;
+}
+.scroll-top:hover {
+	opacity: 0.9;
+	background-color:#820702;
+}
+/* Services CSS */
+.page-block ul li .page-block-image {
+	position:relative;
+	display:block;
+	margin-bottom:10px;
+}
+.page-block ul li .page-block-image img {
+	border:2px solid #feffff;
+	min-width:100%;
+	height:auto;
+}
+.page-block .sold-out {
+	position:absolute;
+	right:2px;
+	top:2px;
+	background:url(images/sold.png);
+	width:77px;
+	height:42px;
+	z-index:1;
+}
+.page-block .accepted {
+	position:absolute;
+	right:2px;
+	top:2px;
+	background:url(images/accepted.png);
+	width:77px;
+	height:42px;
+	z-index:1;
+}
+
+
+.page-block .accepted-ofr {
+	position:absolute;
+	right:2px;
+	top:2px;
+	background:url(images/accepted_old.png);
+	width:77px;
+	height:42px;
+	z-index:1;
+}
+/* CPT Current Home */
+.current-homes .page-block-image {
+	position:relative;
+	display:inline-block;
+}
+.current-homes img.attachment-post-thumbnail {
+	border:1px solid #fff5f2;
+	padding:4px;
+	margin-bottom:10px;
+}
+.sold-out {
+	position:absolute;
+	right:5px;
+	top:5px;
+	background:url(images/sold-banner.png);
+	width: 140px;
+  	height: 85px;
+	z-index:1;
+}
+.accepted {
+	position:absolute;
+	right:5px;
+	top:5px;
+	background:url(images/accepted-banner.png);
+	width: 147px;
+  	height: 85px;
+	z-index:1;
+}
+.forsale {
+	position:absolute;
+	right:5px;
+	top:5px;
+	background:url(images/forsale-banner.png);
+	width: 147px;
+  	height: 85px;
+	z-index:1;
+	/*float:right;*/
+}
+
+.slides .forsale {
+	position: relative;
+    right: 0;
+    top: 0;
+    background: url(images/forsale-banner.png);
+    width: 147px;
+    height: 85px;
+    z-index: 1;
+    float: right;
+    margin: 0 0 -150px 0;
+}
+
+.current-homes .accepted-ofr {
+	position:absolute;
+	right:5px;
+	top:5px;
+	background:url(images/accepted_old.png);
+	width:77px;
+	height:42px;
+	z-index:1;
+}
+/* Footer CSS */
+.site-footer {
+	float:left;
+	height:auto;
+	width:100%;
+	margin:0;
+	padding:0 0 20px 0;
+	background:url(images/footer-bk.png) 0 0 repeat;
+}
+#primary-footer {
+	padding-top:80px;
+}
+.disclaimer * {
+	font-size:13px;
+}
+.disclaimer p,
+.disclaimer ul,
+.disclaimer ol {
+	margin-bottom:5px;
+}
+#secondary-footer {
+	padding:80px 0 0 0;
+	background:url(images/secondary-bk-rep.png) 0 0 repeat;
+}
+.contact-address {
+	margin-bottom:0px !important;
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==========================================================================
+   Media Queries.
+   Use these to target specific screen sizes and devices.
+   ========================================================================== */
+
+/* We use this media query to add styles to any device that supports media queries */
+@media only screen {
+
+}
+
+/**
+ * Foundation: XLarge.
+ * Min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues
+ */
+@media only screen and (max-width: 120em) {
+
+}
+
+/**
+ * Foundation: Large.
+ * Min-width 1025px and max-width 1440px, use when QAing large screen-only issues
+ */
+@media only screen and (max-width: 90em) {
+
+}
+
+/**
+ * Foundation: Medium.
+ * Min-width 641px and max-width 1024px, use when QAing tablet-only issues
+ */
+@media only screen and (max-width: 64em) {
+	.plan-thumbnail img {
+    margin: 5px 0 10px 0;
+    padding:0 !important;
+    display: block;
+    width:100%;
+    height:auto;
+  }
+}
+
+@media screen and (max-width: 782px) {
+	html #wpadminbar {
+		position:fixed !important;
+		top:0 !important;
+		left: 0!important;
+		z-index: 1000 !important;
+		height: 46px;
+		min-width: 300px;
+	}
+	.logged-in .site-header {
+		top:46px;
+	}
+  .plan-thumbnail img {
+    margin: 5px 0 10px 0;
+    padding:0 !important;
+    display: block;
+    width:100%;
+    height:auto;
+  }
+}
+
+/**
+ * Foundation: Small.
+ * Max-width 640px, mobile-only styles, use when QAing mobile issues
+ */
+@media only screen and (max-width: 40em) {
+	/* Header CSS */
+	.logged-in .site-header,
+	.site-header {
+		position:relative;
+		float:left;
+		top:0;
+	}
+	.site-header-coverings {
+		display:none;
+	}
+	/* Slider CSS */
+	.slider-wrapper .soliloquy-container .soliloquy-caption-inside {
+		font-size: 18px !important;
+		line-height:22px !important;
+	}
+	#primary-footer {
+		padding-top:0px;
+	}
+	#secondary-footer {
+		padding:80px 0 0 0;
+	}
+
+	/* Social Media Widget CSS */
+	#secondary .social-media-widget {
+		position:relative;
+		width:100%;
+		padding:0;
+	}
+
+}
+/**
+ * Foundation: Small.
+ * Max-width 640px, mobile-only styles, use when QAing mobile issues
+ */
+@media only screen and (max-width: 480px) {
+	/* Page Block CSS */
+	.page-block ul li {
+		width:100%;
+	}
+}
+
+/**
+ * Foundation: XXLarge
+ * Min-width 1921px, xxlarge screens
+ */
+@media only screen and (min-width: 120.063em) {
+
+}
+
+/* Apply styles to screens in landscape orientation */
+@media only screen and (orientation: landscape) {
+
+}
+
+/* Apply styles to screens in portrait orientation */
+@media only screen and (orientation: portrait) {
+
+}
+
+/* We also use Modernizr to add a .touch class to the body when applicable */
+/* You can prepend this class to anything and it will style only for touch devices */
+.touch .your-element {
+
+}
+
+.read-more a {
+	/*text-decoration: underline !important;*/
+}
+
+.more {
+	text-align: left !important;
+	float:left !important;
+}
+
+.flexslider .slides {
+
+}
+
+.flexslider .slides > li {
+	margin:5px 2px;
+}
+
+.flexslider .slides > li span {
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  top: 165px;
+  margin: 5px;
+  padding: 0 15px;
+  background: #3A3A3A repeat-x;
+  opacity: .8;
+}
+
+.flexslider .slides > li span:hover {
+  opacity: 1;
+}
+
+.flexslider .slides img {
+
+}
+
+.flex-direction-nav a {
+	height: 55px !important;
+}
+.home-plan {
+  display: inline-block;
+}
+
+.plan-thumbnail {
+	padding: 0 0 15px 15px;
+}
+
+.plan-thumbnail img {
+  float:right;
+  display: inline;
+border: 1px solid #FFF;
+padding: 4px;
+margin:0 0 15px 15px;
+}
+
+.plan-gallery ul {
+  margin: 0 auto;
+}
+
+.plan-slides li {
+  display: inline !important;
+  float:left;
+  margin: 0 6px 10px 0;
+}
+
+.plan-slides li a img {
+	border: 2px solid #FFF;
+}
+
+.showcase img {
+	padding: 4px;
+	border: 1px solid #FFF;
+}
+
+.showcase-wrapper ul li a {
+	margin:10px;
+}
+
+@media screen and (max-width: 40em) {
+	nav.main-navigation ul li a {
+		font-size: 16px !important;
+	    padding: .75em !important;
+	}
+
+	nav.main-navigation ul li {
+	    margin:0 !important;
+	}
+}
+
+.flexslider {
+    background: #FFF5F2 !important;
+    border: 4px solid #FFF5F2 !important;
+}
